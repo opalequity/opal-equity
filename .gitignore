@@ -1,0 +1,23 @@
+# Environment files
+.env
+.env.*
+*.local
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*~
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+
+# Node / Scratch files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log

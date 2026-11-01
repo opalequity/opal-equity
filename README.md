@@ -13,6 +13,9 @@ It is built strictly using **HTML5, CSS3, and Vanilla JavaScript** with **zero c
 ```text
 opalequity/
 │
+├── .nojekyll                    # Ensures GitHub Pages serves assets directly without Jekyll
+├── .gitignore                   # Ignores OS/temporary files for clean Git tracking
+├── 404.html                     # Custom branded 404 Error page for GitHub Pages
 ├── index.html                   # 1. Home Page
 ├── about.html                   # 2. About Us Page
 ├── services.html                # 3. Our Services Page
@@ -184,7 +187,51 @@ The website will currently display a clear, friendly demo notice when submitted.
 
 ---
 
-## ☁️ 8. How to Deploy on Cloudflare Pages (Free, Fast, Secure)
+## 🐙 8. How to Deploy on GitHub Pages (Free, 100% Ready)
+
+The project is fully pre-configured for GitHub Pages:
+- `.nojekyll` is included so GitHub Pages serves raw static assets without Jekyll interference.
+- All paths are relative (compatible with subpaths such as `https://<username>.github.io/<repo>/`).
+- A branded `404.html` fallback is included.
+- Active navigation automatically works with GitHub Pages repository URLs.
+
+### Step-by-Step GitHub Pages Deployment:
+
+1. **Initialize Git & Commit Files:**
+   Open PowerShell or Terminal in this folder and run:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit of Opal Equity website"
+   ```
+
+2. **Create a GitHub Repository:**
+   - Go to [github.com/new](https://github.com/new).
+   - Name your repository (e.g. `opalequity`).
+   - Leave it **Public** (required for free GitHub Pages) or Private (if you have GitHub Pro).
+   - Do **NOT** initialize with a README, .gitignore, or license (they are already created here).
+
+3. **Link & Push to GitHub:**
+   ```bash
+   git branch -M main
+   git remote add origin https://github.com/<your-github-username>/opalequity.git
+   git push -u origin main
+   ```
+
+4. **Enable GitHub Pages:**
+   - In your GitHub repository, click **Settings** (top menu).
+   - On the left sidebar, click **Pages**.
+   - Under **Build and deployment** > **Source**, select **Deploy from a branch**.
+   - Under **Branch**, select `main` and `/ (root)`.
+   - Click **Save**.
+
+5. **Done!**
+   In 1-2 minutes, your website will be live at:
+   `https://<your-github-username>.github.io/opalequity/`
+
+---
+
+## ☁️ 9. How to Deploy on Cloudflare Pages (Free, Fast, Secure)
 
 Cloudflare Pages provides global CDN hosting, free SSL certificates (`https://`), and DDOS protection with zero server maintenance.
 

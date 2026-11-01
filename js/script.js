@@ -109,12 +109,18 @@ function initMobileNav() {
  * 3. ACTIVE NAVIGATION HIGHLIGHTER
  * ------------------------------------------------------------------------------ */
 function initActiveNav() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  let currentFile = pathParts.length > 0 ? pathParts[pathParts.length - 1] : '';
+  if (!currentFile || !currentFile.includes('.')) {
+    currentFile = 'index.html';
+  }
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (!href) return;
+    const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
+    if (linkFile === currentFile) {
       link.classList.add('active');
     }
   });
