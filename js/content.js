@@ -50,7 +50,7 @@ const OPAL_CONTENT = {
       cityStateZip: "Kathmandu",
       country: "Nepal"
     },
-    officeHours: "Monday – Friday: 9:00 AM – 6:00 PM (Local Time)",
+    officeHours: "Monday – Friday: 9:00 AM – 5:00 PM (Local Time)",
     socialLinks: {
       linkedin: "#", // Add official LinkedIn URL here
       twitter: "#",  // Add official X/Twitter URL here
@@ -248,25 +248,25 @@ const OPAL_CONTENT = {
   ],
 
   // ----------------------------------------------------------------------------
-  // 7. OUR TEAM (Placeholder leadership profiles ready for official details)
+  // 7. OUR TEAM
   // ----------------------------------------------------------------------------
   team: [
     {
       id: 1,
-      name: "[Executive Name Placeholder]",
-      role: "Chief Executive Officer (CEO)",
+      name: "Bed Prasad Khanal",
+      role: "Chairman",
       image: "images/placeholders/executive-placeholder.jpg"
     },
     {
       id: 2,
-      name: "[Executive Name Placeholder]",
+      name: "Jhanak Datta Khanal",
       role: "Managing Director",
       image: "images/placeholders/executive-placeholder.jpg"
     },
     {
       id: 3,
-      name: "[Executive Name Placeholder]",
-      role: "Director",
+      name: "Dinuka Pokharel",
+      role: "Managing Director",
       image: "images/placeholders/executive-placeholder.jpg"
     },
     {
